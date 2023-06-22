@@ -8,7 +8,7 @@ const Home = () => {
   const [breeds, setBreeds] = useState<String[]>([])
   const [selectedBreed, setSelectedChoice] = useState('')
   const [randomImage, setRandomImage] = useState<string>('')
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+
 
   useEffect(() => {
     fetchBreedsApi()
@@ -20,14 +20,11 @@ const Home = () => {
 
   const fetchBreedsApi = async () => {
     try{
-      setIsLoading(true)
       const response = await axios.get('https://dog.ceo/api/breeds/list/all')
       const breedNames = Object.keys(response.data.message)
       setBreeds(breedNames)
     } catch (error) {
       console.error(error)
-    } finally {
-      setIsLoading(false)
     }
   }
 
@@ -45,15 +42,12 @@ const Home = () => {
 
   const fetchRandomImageSelectedBreed = async (breed: string) => {
     try {
-      setIsLoading(true)
       const response = await axios.get(`https://dog.ceo/api/breed/${breed}/images/random`)
       setRandomImage(response.data.message)
     } catch (error) {
       console.error(error)
-    } finally {
-      setIsLoading(false)
-    }
   }
+}
 
 
 
