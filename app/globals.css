@@ -6,6 +6,7 @@
 body {
   background-color: rgb(158, 180, 167);
 }
+<<<<<<< HEAD
 
 button {
   background-color: white;
@@ -20,3 +21,5 @@ button:hover {
   transition: 150ms;
   scale: 1.1;
 }
+=======
+>>>>>>> 00556022eb7e277d8367570645233e5465fcf4d2
