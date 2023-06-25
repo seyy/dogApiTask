@@ -12,9 +12,11 @@ button {
   width: 100px;
   height: 40px;
   border-radius: 17px;
+
 }
 
 button:hover {
   background-color: aliceblue;
   transition: 150ms;
+  scale: 1.1;
 }
