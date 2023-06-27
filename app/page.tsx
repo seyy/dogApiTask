@@ -1,13 +1,14 @@
 "use client"
-import MainPage from './modules/MainPage'
-import NavButtons from './modules/navButtons'
+import ListBreedPage from '@/pages/ListBreedPage'
+import NavButtons from '@/pages/NavButtons'
+
 
 const Home: React.FC = () => { 
-
+  
   return (
-    <main className='flex items-center justify-center'>
+    <main className='flex justify-center items-center'>
       <div className='flex justify-center'>
-        <MainPage />
+        <ListBreedPage />
         <NavButtons />
       </div>
     </main>

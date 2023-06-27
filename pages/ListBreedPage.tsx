@@ -1,11 +1,16 @@
 "use client"
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+import "@/app/globals.css"
+import NavButtons from './NavButtons'
+
+// Rest of the component code
 
 
 
 
-const MainPage: React.FC = () => { 
+
+const ListBreedPage: React.FC = () => { 
   const [breeds, setBreeds] = useState<String[]>([])
   const [selectedBreed, setSelectedChoice] = useState('')
   const [randomImage, setRandomImage] = useState<string>('')
@@ -66,8 +71,9 @@ const MainPage: React.FC = () => {
           ))}
         </select>
         {randomImage && <img className='mt-24 h-[300px] w-[400px]' src={randomImage} alt='Random Dog' /> }
+        <NavButtons />
       </div>
   )
 }
 
-export default MainPage
+export default ListBreedPage
